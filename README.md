@@ -15,7 +15,7 @@
   - [Run tests](#run-tests)
   <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
 - [👥 Authors](#authors)
-<!-- - [🔭 Future Features](#future-features) -->
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 <!-- - [🙏 Acknowledgements](#acknowledgements)
@@ -126,6 +126,10 @@ Example command:
 - Twitter: [@davezagabe2](https://twitter.com/davezagabe2)
 - LinkedIn: [@davezagabe](https://www.linkedin.com/in/davezagabe/)
 
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Add GUI**
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -143,6 +147,6 @@ If you like this project, kindly give it a star ⭐️
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
