@@ -5,6 +5,10 @@ class Post < ApplicationRecord
   after_initialize :update_self_counters
   after_save :update_posts_counter
 
+  validates: :title, length: {maximum:250} ,presence: true
+  validates: :comments_counter, numericality: true, comparison: {greater_or_equal_to: 0}
+  validate: :likes_counter, numericality: true, comparison: {greater_or_equal_to: 0}
+
   # Update the posts counter
   def update_posts_counter
     User.find(author_id).increment!(:posts_counter)
