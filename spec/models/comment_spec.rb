@@ -16,7 +16,6 @@ RSpec.describe Comment, type: :model do
     end
   end
 
-
   context 'when post is not saved' do
     after { subject.save }
     it 'comments_counter should be 0' do
