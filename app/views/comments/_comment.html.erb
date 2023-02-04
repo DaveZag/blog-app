@@ -1,0 +1,8 @@
+<%=form_with model: @comment, url: user_post_comments_path(@post.author_id, @post.id) do |form| %>
+<div class="comment-form flex">
+   <%= form.text_area :text, hide_label: true, placeholder: "Your comment..." %>
+   <%= form.submit "Add a comment", class: 'btn' %>
+  </div>
+<% end %>
+
+<%=flash[:error]%>

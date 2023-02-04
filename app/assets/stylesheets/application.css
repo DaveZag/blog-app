@@ -41,6 +41,21 @@ a:hover {
   justify-content: center;
 }
 
+.btn {
+  width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.152);
+  padding: 0.5rem;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.104);
+  margin-inline: auto;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.407);
+}
+
+/* ........... Site styles ........... */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -95,6 +110,8 @@ a:hover {
   padding: 0.5rem 0;
 }
 
+/* ............... User posts list .............. */
+
 .posts-list,
 .user-posts-container {
   flex-direction: column;
@@ -103,12 +120,14 @@ a:hover {
 }
 
 .post-card {
+  width: 100%;
   padding: 1rem;
   flex-direction: column;
 }
 
 .post-title {
   font-weight: bold;
+  font-size: 1.2rem;
   width: fit-content;
 }
 
@@ -123,27 +142,21 @@ a:hover {
 }
 
 .user-post-comments-container {
-  width: 68.7%;
+  width: 70%;
   padding: 1rem;
   margin-top: -0.5rem;
 }
 
-.btn {
-  width: fit-content;
-  border: 1px solid rgba(0, 0, 0, 0.152);
-  padding: 0.5rem;
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.104);
-  margin-inline: auto;
-}
+/* .................... Article Section ............... */
 
-.btn:hover {
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.407);
+.user-posts-container .post-card {
+  width: 70%;
 }
 
 .post-container {
   width: 70%;
   padding: 2rem 1rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .post-header {
@@ -158,8 +171,76 @@ a:hover {
 .post-comments-container {
   margin-top: 2rem;
   width: 70%;
+  padding: 1rem 0;
 }
 
 .comment {
   padding: 1rem;
+}
+
+.post-like-btn {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+}
+
+/* ................. New Post form ............... */
+
+.new-post-container {
+  padding: 1rem 1.2rem;
+  min-width: 20rem;
+  min-height: 18rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  font-size: 1.2rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.form-post-title,
+.form-post-text {
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.form-post-title input,
+.form-post-text textarea {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.form-post-title input:focus,
+.form-post-text textarea:focus {
+  outline: 1px solid rgb(251, 136, 53);
+  border: none;
+}
+
+.form .btn {
+  margin-inline: auto;
+}
+
+/* ........ Comment Form ........ */
+
+.comment-form {
+  flex-direction: column;
+  width: 50%;
+  background-color: rgb(251, 136, 53);
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.comment-form .btn {
+  align-self: flex-start;
+  margin-inline: unset;
+  margin-top: 1rem;
 }
