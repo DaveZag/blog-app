@@ -1,15 +1,165 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  box-sizing: inherit;
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(251, 136, 53);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-c {
+  justify-content: center;
+  align-items: center;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.users-container header {
+  padding: 0.5rem 0;
+}
+
+.card {
+  width: fit-content;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  border-radius: 0.5rem;
+  margin-inline: auto;
+}
+
+.image-block {
+  background-color: rgb(251, 136, 53);
+  min-height: 5rem;
+}
+
+.details-block {
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.card-title {
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+
+.posts-number {
+  align-self: flex-end;
+  font-size: 15px;
+  color: rgb(56, 56, 56);
+}
+
+.profile-container {
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.user-bio {
+  width: 100%;
+  padding: 1rem;
+}
+
+.bio-title {
+  padding: 0.5rem 0;
+}
+
+.posts-list,
+.user-posts-container {
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.post-card {
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.post-title {
+  font-weight: bold;
+  width: fit-content;
+}
+
+.post-short {
+  width: 70%;
+  margin: 1rem 0;
+}
+
+.post-counters {
+  gap: 0.3rem;
+  align-self: flex-end;
+}
+
+.user-post-comments-container {
+  width: 68.7%;
+  padding: 1rem;
+  margin-top: -0.5rem;
+}
+
+.btn {
+  width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.152);
+  padding: 0.5rem;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.104);
+  margin-inline: auto;
+}
+
+.btn:hover {
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.407);
+}
+
+.post-container {
+  width: 70%;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+}
+
+.post-header {
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.post-body {
+  margin-top: 2rem;
+}
+
+.post-comments-container {
+  margin-top: 2rem;
+  width: 70%;
+}
+
+.comment {
+  padding: 1rem;
+}

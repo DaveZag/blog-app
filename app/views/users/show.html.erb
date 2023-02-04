@@ -1,1 +1,11 @@
-<h1>View to check a single user</h1>
+<section class="profile-container flex">
+  <%=render partial: "partials/user", locals: {user: @user}%>
+  <div class="card user-bio">
+  <h2 class="bio-title">Bio</h2>
+    <%=@user.bio%>
+  </div>
+  <div class="card posts-list flex">
+    <%=render partial: "partials/post", collection: @user.latest_posts%>
+  </div>
+<%= link_to 'See all posts', user_posts_path(@user), class: "btn" %>
+</section>
