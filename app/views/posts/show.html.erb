@@ -9,9 +9,13 @@
   <div class="post-body">
     <p class="card-text"><%= @post.text %></p>
   </div>
+  <div class="post-like-btn">
+    <%= render 'likes/like'%>
+  </div>
 </section>
 <section class="card post-comments-container">
   <div class="comment">
     <%= render partial: "partials/comment", collection: @post.comments %>
   </div>
+  <%= render 'comments/comment'%>
 </section>

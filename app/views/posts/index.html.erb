@@ -8,4 +8,5 @@
       <%= render partial: 'partials/comment', collection: post.latest_comments %>
     </div>
   <% end %>
+  <%=link_to 'Create new Post', new_user_post_path(@user.id), class: "btn" %>
 </section>
