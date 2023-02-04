@@ -1,0 +1,12 @@
+<div class="card user-card flex">
+  <div class="image-block">
+    <img src=<%=user.photo%> alt="user image" class="user-profile-img" />
+  </div>
+
+  <div class="details-block flex">
+    <div class="card-title">
+      <%= link_to user.name, user%>
+    </div>
+    <p class="posts-number">Number of Posts: <%=user.posts_counter%></p>
+  </div>
+</div>

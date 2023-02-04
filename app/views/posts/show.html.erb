@@ -1,1 +1,17 @@
-<h1>View to check a specific post from a specific user</h1>
+<section class="card post-container">
+  <div class="post-header flex">
+    <h3 class="post-title">Post #<%= @post.id %> by <%= @post.author.name %></h3>
+    <p class="post-counters flex">
+      <span class="text-muted">Comments: <%= @post.comments_counter %> </span>
+      <span class="text-muted">Likes: <%= @post.likes_counter %></span>
+    </p>
+  </div>
+  <div class="post-body">
+    <p class="card-text"><%= @post.text %></p>
+  </div>
+</section>
+<section class="card post-comments-container">
+  <div class="comment">
+    <%= render partial: "partials/comment", collection: @post.comments %>
+  </div>
+</section>

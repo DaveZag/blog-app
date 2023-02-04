@@ -1,1 +1,11 @@
-<h1>View to check all posts from a specific user</h1>
+
+<section class="user-posts-container flex">
+  <%= render 'partials/user', user: @user %>
+  <% @user_posts.each do |post| %>
+    <%= render 'partials/post', post: post %>
+    <div class="card user-post-comments-container">
+      <h4>Comments</h4><br>
+      <%= render partial: 'partials/comment', collection: post.latest_comments %>
+    </div>
+  <% end %>
+</section>
