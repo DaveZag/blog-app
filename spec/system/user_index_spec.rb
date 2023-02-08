@@ -17,7 +17,7 @@ RSpec.describe 'index page', type: :system do
     end
     it 'redirect to show' do
       visit root_path
-      click_link @user.name, match: :first
+      click_link(@user.name, match: :first)
       expect(page).to have_current_path("/users/#{@user.id}")
     end
   end

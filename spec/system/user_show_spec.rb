@@ -1,7 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'index page', type: :system do
+RSpec.describe 'Show page', type: :system do
   before(:each) do
+    driven_by(:rack_test)
     @user = User.create(name: 'VITS', photo: 'https:123', bio: 'A software developer based in Kenya', posts_counter: 0)
     3.times do |a|
       @posts = Post.create(author_id: @user.id, title: "#{a} Post", text: 'hello', comments_counter: 0,
@@ -30,7 +31,7 @@ RSpec.describe 'index page', type: :system do
     it 'onclick redirect to posts show' do
       visit user_path(@user)
       click_link @posts.title, match: :first
-      expect(page).to have_current_path("/users/#{@user.id}")
+      expect(page).to have_current_path("/users/#{@user.id}/posts/#{@posts.id}")
     end
 
     it 'onclick redirect to posts index' do
