@@ -13,6 +13,11 @@
 
   <body>
     <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+      <div class="sign-btn">
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false}, class: "btn" if user_signed_in?%>
+      </div>
       <%= yield %>
     </div>
   </body>
