@@ -5,6 +5,9 @@ ruby '3.1.3'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# For user authentication
+gem 'devise'
+
 # For hiding sensitive information
 gem 'figaro'
 

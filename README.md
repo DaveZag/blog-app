@@ -126,6 +126,12 @@ Example command:
 - Twitter: [@davezagabe2](https://twitter.com/davezagabe2)
 - LinkedIn: [@davezagabe](https://www.linkedin.com/in/davezagabe/)
 
+👤 **Wilson Vitalis**
+
+- GitHub: [@svitalis123](https://github.com/svitalis123)
+- Twitter: [@WilsonVitalis](https://twitter.com/WilsonVitalis)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/vitalismutwiri)
+
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add GUI**
@@ -144,6 +150,7 @@ If you like this project, kindly give it a star ⭐️
 
 - Microverse
 - Ruby on Rails Documentation🙃
+- Every person who inspired this codebase
 
 ## 📝 License <a name="license"></a>
 
