@@ -15,7 +15,7 @@ RSpec.describe 'Post index page', type: :system do
 
   context 'When visiting the post index page' do
     it "should load the userr's picture" do
-        expect(page).to have_xpath("//img[@src='#{@user.photo}']")
+      expect(page).to have_xpath("//img[@src='#{@user.photo}']")
     end
 
     it "should load the user's name" do
@@ -39,16 +39,16 @@ RSpec.describe 'Post index page', type: :system do
     end
 
     it "should show post's comments number" do
-        expect(page).to have_content("Comments: #{@post.comments_counter}")
-      end
+      expect(page).to have_content("Comments: #{@post.comments_counter}")
+    end
 
     it "should show post's likes" do
-        expect(page).to have_content("Likes: #{@post.likes_counter}")
+      expect(page).to have_content("Likes: #{@post.likes_counter}")
     end
-    
-      it 'should redirects you to the post show page' do
-        click_link('Post Title: Hello there')
-        expect(current_path).to eq "/users/#{@user.id}/posts/#{@post.id}"
-      end
+
+    it 'should redirects you to the post show page' do
+      click_link('Post Title: Hello there')
+      expect(current_path).to eq "/users/#{@user.id}/posts/#{@post.id}"
+    end
   end
 end
