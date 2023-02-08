@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     puts @comment.inspect
     respond_to do |_format|
       if @comment.save
-        flash[:success] = 'Comment Added successfully'
+        flash[:notice] = 'Comment Added successfully'
         redirect_to user_post_path(current_user, @comment.post_id)
       else
         flash[:error] = 'An error has occurred. Comment could not be created, Please try again later.'
