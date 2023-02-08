@@ -5,6 +5,9 @@ ruby '3.1.3'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# For hiding sensitive information
+gem 'figaro'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
@@ -60,6 +63,7 @@ gem 'rails-controller-testing'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'database_cleaner'
   gem 'hotwire-livereload'
   gem 'web-console'
 

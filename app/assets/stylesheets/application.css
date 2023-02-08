@@ -101,6 +101,10 @@ a:hover {
   padding: 3rem;
 }
 
+.user-card:not(:first-child) {
+  margin-top: 1rem;
+}
+
 .user-bio {
   width: 100%;
   padding: 1rem;

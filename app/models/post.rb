@@ -16,7 +16,7 @@ class Post < ApplicationRecord
 
   # Return the five latest comments
   def latest_comments
-    Comment.where(post_id: id).order(created_at: :desc).limit(5)
+    Comment.includes([:author]).where(post_id: id).order(created_at: :desc).limit(5)
   end
 
   def update_self_counter
