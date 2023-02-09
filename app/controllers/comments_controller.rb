@@ -17,11 +17,9 @@ class CommentsController < ApplicationController
     comment = Comment.find(params[:id])
     if comment.destroy
       flash[:success] = 'Comment was successfully deleted.'
-      redirect_to user_post_path
     else
       flash[:error] = 'Something went wrong'
-      redirect_to user_post_path
     end
+    redirect_to user_post_path
   end
-  
 end
