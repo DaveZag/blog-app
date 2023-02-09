@@ -18,4 +18,8 @@
     <%= render partial: "partials/comment", collection: @post.comments %>
   </div>
   <%= render 'comments/comment'%>
+
+  <% if can? :destroy, @post %>
+    <%= button_to "Delete post", user_post_path(@post.author_id, @post.id), method: :delete, data: { turbo: false }, class: 'btn delete-btn' %>
+  <% end %>
 </section>

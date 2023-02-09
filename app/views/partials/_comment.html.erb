@@ -1,3 +1,6 @@
 <p class="comment-text">
   <span><%= comment.author.name %>:</span> <%= comment.text %>
+   <% if can? :destroy, comment %>
+    <%= button_to "Delete", user_post_comment_path(comment.author_id, comment.post_id, comment), method: :delete, data: {turbo: false}, class: 'btn delete-btn'%>
+  <% end %>
 </p>

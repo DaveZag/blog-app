@@ -1,11 +1,12 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-  has_many :posts
-  has_many :likes
-  has_many :comments
+         :recoverable, :rememberable, :validatable, :confirmable
+
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
   after_initialize :update_posts_counter
 
   validates :name, presence: true
@@ -13,6 +14,12 @@ class User < ApplicationRecord
 
   def update_posts_counter
     self.posts_counter = 0 unless posts_counter
+  end
+
+  ROLES = %i[admin user].freeze
+
+  def admin?
+    role == 'admin'
   end
 
   private :update_posts_counter

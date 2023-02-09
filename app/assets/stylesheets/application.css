@@ -74,9 +74,15 @@ a:hover {
   margin-inline: auto;
 }
 
-.image-block {
+.user-card {
+  height: 10rem;
+}
+
+.image-block img {
   background-color: rgb(251, 136, 53);
-  min-height: 5rem;
+  object-fit: scale-down;
+  height: 10rem;
+  width: 100%;
 }
 
 .details-block {
