@@ -37,5 +37,4 @@ class PostsController < ApplicationController
     user.save
     redirect_to user_posts_path
   end
-  
 end

@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
-  
+
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -16,7 +16,7 @@ class User < ApplicationRecord
     self.posts_counter = 0 unless posts_counter
   end
 
-  ROLES = %i[admin user]
+  ROLES = %i[admin user].freeze
 
   def admin?
     role == 'admin'
