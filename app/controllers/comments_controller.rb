@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(post: Post.find(params[:post_id]), author: User.find(params[:user_id]),
                            text: params[:text])
-    puts @comment.inspect
+
     respond_to do |_format|
       if @comment.save
         flash[:notice] = 'Comment Added successfully'
@@ -12,4 +12,16 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+      flash[:success] = 'Comment was successfully deleted.'
+      redirect_to user_posts_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to user_posts_path
+    end
+  end
+  
 end

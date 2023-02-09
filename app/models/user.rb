@@ -16,6 +16,12 @@ class User < ApplicationRecord
     self.posts_counter = 0 unless posts_counter
   end
 
+  ROLES = %i[admin user]
+
+  def admin?
+    role == 'admin'
+  end
+
   private :update_posts_counter
 
   # return 3 latests posts
