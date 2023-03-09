@@ -6,7 +6,7 @@ class Ability
 
     return unless user.present?
 
-    can :manage, Post, author: user # if the user is logged in, he can manage he's own posts
+    can :manage, Post, author: user # if the user is logged in, he can manage his own posts
     can :create, Comment
     can :destroy, Comment, author: user
 
